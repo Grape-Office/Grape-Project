@@ -1,0 +1,82 @@
+[
+  {
+    "name": "네이버",
+    "url": "https://blog.naver.com/{user}"
+  },
+  {
+    "name": "티스토리",
+    "url": "https://{user}.tistory.com"
+  },
+  {
+    "name": "디벤치 - 개발자 포럼",
+    "url": "https://devbench.kr/users/{user}"
+  },
+  {
+    "name": "깃허브",
+    "url": "http://github.com/{user}"
+  },
+  {
+    "name": "Chzzk",
+    "url": "http://api.chzzk.naver.com/service/v1/search/channels?keyword={user}"
+  },
+  {
+    "name": "일간베스트",
+    "url": "http://www.ilbe.com/list/jjal?searchType=nick_name&search={user}"
+  },
+  {
+    "name": "velog",
+    "url": "https://velog.io/@{user}/posts"
+  },
+  {
+    "name": "에펨코리아",
+    "url": "https://www.fmkorea.com/search.php?search_keyword={user}&search_target=nick_name"
+  },
+  {
+    "name": "루리웹",
+    "url": "https://bbs.ruliweb.com/hobby/board/300228//?search_type=name&search_key={user}"
+  },
+  {
+    "name": "아카라이브",
+    "url": "https://arca.live/b/breaking?target=nickname&keyword={user}"
+  },
+  {
+    "name": "나무위키",
+    "url": "https://namu.wiki/w/사용자:{user}"
+  },
+  {
+    "name": "브런치스토리",
+    "url": "https://brunch.co.kr/@{user}"
+  },
+  {
+    "name": "인스타그램",
+    "url": "https://www.instagram.com/{user}"
+  },
+  {
+    "name": "유튜브",
+    "url": "https://www.youtube.com/@{user}"
+  },
+  {
+    "name": "쿨앤조이",
+    "url": "https://coolenjoy.net/bbs/profile.php?mb_id={user}"
+  },
+  {
+    "name": "힙합플레이야",
+    "url": "https://hiphopplaya.com/g2/bbs/profile.php?mb_id={user}"
+  },
+  {
+    "name": "풋셀",
+    "url": "https://footsell.com/g2//bbs/profile.php?mb_id={user}"
+  },
+  {
+    "name": "스팀잇",
+    "url": "https://steemit.com/@{user}"
+  },
+  {
+    "name": "미디엄",
+    "url": "https://medium.com/@{user}"
+  },
+  {
+    "name": "인벤",
+    "url": "https://www.inven.co.kr/member/inventory/view_inventory.php?nick={user}"
+  }
+]
