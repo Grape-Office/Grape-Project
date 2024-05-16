@@ -3,6 +3,7 @@ import sys
 import requests
 import nofity
 import warnings
+from banner import banner
 
 # Global variable
 datas = dict()
@@ -49,6 +50,8 @@ def find_user():
 
 
 def main():
+    banner("PodoChung")
+
     check_user()
 
     read_json()
