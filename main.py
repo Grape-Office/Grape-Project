@@ -1,12 +1,16 @@
 import json
 import sys
-import requests
-import nofity
 import warnings
+
+import nofity
+import requests
+from banner import banner
+from toCSV import resultsToCSV
 
 # Global variable
 datas = dict()
 cnt = 0
+results = dict()
 
 warnings.filterwarnings(action='ignore')
 
@@ -32,6 +36,7 @@ def read_json():
 def find_user():
     global cnt
     for user in sys.argv[1::]:
+        results[user] = dict()
         nofity.start(user)
         for data in datas:
             site = data['name']
@@ -41,19 +46,24 @@ def find_user():
                 nofity.search(site, url, response.status_code)
                 if response.status_code == 200:
                     cnt += 1
+                results[user][data['name']] = url
             except requests.exceptions.RequestException:
                 continue
-        print('\r')
+        print('\r'+'='*20+'\r')
         nofity.result(cnt, user)
         cnt = 0
 
 
 def main():
+    banner("PodoChung")
+
     check_user()
 
     read_json()
 
     find_user()
+    
+    resultsToCSV(results)
 
 
 if __name__ == '__main__':
