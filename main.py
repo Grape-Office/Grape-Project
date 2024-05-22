@@ -41,8 +41,12 @@ def find_user():
         for data in datas:
             site = data['name']
             url = data['url'].replace('{user}', user)
+            usrNotFound = data['user_not_found']
             try:
-                response = requests.get(url, headers=headers, verify=False)
+                if usrNotFound == "redirect" :
+                    response = requests.get(url, headers=headers, verify=False, allow_redirects=False)
+                else :
+                    response = requests.get(url, headers=headers, verify=False)
                 nofity.search(site, url, response.status_code)
                 if response.status_code == 200:
                     cnt += 1
