@@ -20,7 +20,7 @@ def toCSV(username, result):
         os.makedirs(folder_name)
         
     csv_file_path = os.path.join(folder_name, file_name)
-    df.to_csv(csv_file_path, index=False)
+    df.to_csv(csv_file_path, index=False, encoding="utf-8-sig")
 
 
 if __name__ == "__main__":
