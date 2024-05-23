@@ -40,7 +40,7 @@ def find_user():
         nofity.start(user)
         for data in datas:
             site = data['name']
-            url = data['url'].replace('{user}', user)
+            url = data['url'].format(user)
             usrNotFound = data['user_not_found']
             try:
                 if usrNotFound == "redirect" :
@@ -50,7 +50,7 @@ def find_user():
                 nofity.search(site, url, response.status_code)
                 if response.status_code == 200:
                     cnt += 1
-                results[user][data['name']] = url
+                    results[user][data['name']] = url
             except requests.exceptions.RequestException:
                 continue
         print('\r'+'='*20+'\r')
