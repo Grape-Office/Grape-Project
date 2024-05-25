@@ -6,6 +6,7 @@ import nofity
 import requests
 from banner import banner
 from toCSV import resultsToCSV
+import crawling
 
 # Global variable
 datas = dict()
@@ -39,16 +40,28 @@ def find_user():
         results[user] = dict()
         nofity.start(user)
         for data in datas:
+            crawlingFlag = False
+            crawlingResult = False
             site = data['name']
             url = data['url'].format(user)
             usrNotFound = data['user_not_found']
             try:
+                #usrNotFound 구분
                 if usrNotFound == "redirect" :
                     response = requests.get(url, headers=headers, verify=False, allow_redirects=False)
+                elif usrNotFound == "html" :
+                    crawlingFlag = True
+                    crawlingResult = crawling.crawlingFunc(url, data['description'])
                 else :
                     response = requests.get(url, headers=headers, verify=False)
-                nofity.search(site, url, response.status_code)
-                if response.status_code == 200:
+                #유저 탐지 성공 시 출력, 크롤링 구분
+                if crawlingFlag == False:
+                    nofity.search(site, url, response.status_code)
+                else:
+                    if crawlingResult == True:
+                        nofity.search(site, url, 200)
+                #유저 탐지 성공 시 count 및 csv 등록
+                if response.status_code == 200 or crawlingResult == True:
                     cnt += 1
                     results[user][data['name']] = url
             except requests.exceptions.RequestException:
