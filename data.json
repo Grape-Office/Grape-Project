@@ -1,347 +1,478 @@
 [
   {
+    "chk_regi": "1",
     "name": "Chzzk",
     "url": "https://api.chzzk.naver.com/service/v1/search/channels?keyword={}",
-    "user_not_found": ""
+    "user_not_found": "\"page\":null,\"data\":[]",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "DACON",
     "url": "https://dacon.io/search?tab=user&q={}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
-    "name": "imgur",
-    "url": "https://imgur.com/user/{}",
-    "user_not_found": ""
-  },
-  {
-    "name": "linktree",
-    "url": "https://linktr.ee/{}",
-    "user_not_found": ""
-  },
-  {
+    "chk_regi": "1",
     "name": "MLBPARK",
     "url": "https://mlbpark.donga.com/mp/b.php?m=user&user={}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
+    "name": "imgur",
+    "url": "https://imgur.com/user/{}",
+    "user_not_found": "",
+    "description": ""
+  },
+  {
+    "chk_regi": "1",
+    "name": "linktree",
+    "url": "https://linktr.ee/{}",
+    "user_not_found": "",
+    "description": ""
+  },
+  {
+    "chk_regi": "1",
     "name": "op.gg(게시판)",
     "url": "https://talk.op.gg/s/lfg/all?search_target=user_name&search={}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
-    "name": "velog",
-    "url": "velog.io/@{}/posts",
-    "user_not_found": ""
-  },
-  {
+    "chk_regi": "1",
     "name": "slides",
     "url": "https://slides.com/{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
-    "name": "soundcloud",
-    "url": "https://soundcloud.com/{}",
-    "user_not_found": ""
-  },
-  {
+    "chk_regi": "1",
     "name": "snapchat",
     "url": "https://www.snapchat.com/add/{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
+    "name": "soundcloud",
+    "url": "https://soundcloud.com/{}",
+    "user_not_found": "",
+    "description": ""
+  },
+  {
+    "chk_regi": "1",
     "name": "spotify",
     "url": "https://open.spotify.com/user/{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "steam",
     "url": "https://steamcommunity.com/id/{}/",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
+    "name": "velog",
+    "url": "velog.io/@{}/posts",
+    "user_not_found": "",
+    "description": ""
+  },
+  {
+    "chk_regi": "1",
     "name": "xbox",
     "url": "https://xboxgamertag.com/search/{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "깃랩",
     "url": "https://gitlab.com/{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "깃허브",
     "url": "https://github.com/{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "나무위키",
     "url": "https://namu.wiki/w/사용자:{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "네이버",
     "url": "blog.naver.com/{}",
-    "user_not_found": "죄송합니다. 유효하지 않은 요청입니다."
+    "user_not_found": "죄송합니다. 유효하지 않은 요청입니다.",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "네이트판",
     "url": "https://pann.nate.com/search?searchType=N&q={}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "다음 카페",
     "url": "https://m.cafe.daum.net/{}",
-    "user_not_found": "페이지 사용 권한이 없습니다."
+    "user_not_found": "페이지 사용 권한이 없습니다.",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "닷넷데브",
     "url": "https://forum.dotnetdev.kr/u/{}/summary",
-    "user_not_found": "status code"
+    "user_not_found": "status code",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "돌비 시네마",
     "url": "https://dprime.kr/g2//bbs/profile.php?mb_id={}&bo_table=dpinfo",
-    "user_not_found": "존재하지 않는 게시판입니다."
+    "user_not_found": "존재하지 않는 게시판입니다.",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "뒤끝 커뮤니티",
     "url": "https://community.thebackend.io/u/{}/summary",
-    "user_not_found": "status code"
+    "user_not_found": "status code",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "디벤치 - 개발자 포럼",
     "url": "devbench.kr/users/{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "디시인사이드",
     "url": "https://gallog.dcinside.com/{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "로켓펀치",
     "url": "https://www.rocketpunch.com/@{}",
-    "user_not_found": "페이지를 찾을 수 없습니다."
+    "user_not_found": "페이지를 찾을 수 없습니다.",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "루리웹",
     "url": "https://bbs.ruliweb.com/hobby/board/300228//?search_type=name&search_key={}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "리틀리",
     "url": "https://litt.ly/{}",
-    "user_not_found": "redirect"
+    "user_not_found": "redirect",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "매니아",
     "url": "https://mania.kr/g2//bbs/profile.php?mb_id={}&bo_table=nbatalk",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "미니맵",
     "url": "https://minimap.net/user/{}",
-    "user_not_found": "앗! 찾을 수 없는 회원 입니다"
+    "user_not_found": "앗! 찾을 수 없는 회원 입니다",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "미디엄",
     "url": "https://medium.com/@{}",
-    "user_not_found": "html"
+    "user_not_found": "html",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "백준온라인저지",
     "url": "https://www.acmicpc.net/user/{}",
-    "user_not_found": "status code"
+    "user_not_found": "status code",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "보드라이프",
     "url": "https://boardlife.co.kr/{}",
-    "user_not_found": "status code"
+    "user_not_found": "status code",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "보배드림",
     "url": "POST https://m.bobaedream.co.kr/search\nContent-Type: application/x-www-form-urlencoded \nbody: colle=&searchField=user_name&page=1&keyword={}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "브런치스토리",
     "url": "https://brunch.co.kr/@{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "세리에매니아",
     "url": "https://serieamania.com/g2//bbs/profile.php?mb_id={}",
-    "user_not_found": "회원정보가 존재하지 않습니다."
+    "user_not_found": "회원정보가 존재하지 않습니다.",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "스레드",
     "url": "https://www.threads.net/@{}?hl=ko",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "스팀잇",
     "url": "https://steemit.com/@{}",
-    "user_not_found": "status code"
+    "user_not_found": "status code",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "아이보스",
     "url": "https://www.i-boss.co.kr/@{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "아카라이브",
     "url": "https://arca.live/b/breaking?target=nickname&keyword={}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "아프리카TV",
     "url": "https://bj.afreecatv.com/{}",
-    "user_not_found": "html"
+    "user_not_found": "html",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "알고리즘 위키",
     "url": "https://algowiki.co.kr/userinfo.php?user={}",
-    "user_not_found": "html"
+    "user_not_found": "html",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "어미새",
     "url": "https://eomisae.co.kr/index.php?mid=profile&smember={}",
-    "user_not_found": "찾을수 없는 회원입니다."
+    "user_not_found": "찾을수 없는 회원입니다.",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "에펨코리아",
     "url": "https://www.fmkorea.com/search.php?search_keyword={}&search_target=nick_name",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "영디비",
     "url": "https://www.0db.co.kr/ylog?smember={}",
-    "user_not_found": "html"
+    "user_not_found": "html",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "오늘의 유머",
     "url": "https://www.todayhumor.co.kr/board/list.php?kind=search&keyfield=name&keyword={}&Submit.x=0&Submit.y=0",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "오르비",
     "url": "https://orbi.kr/search?type=nickname&q={}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "요즘IT",
     "url": "https://yozm.wishket.com/magazine/@{}/",
-    "user_not_found": "redirect"
+    "user_not_found": "redirect",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "우분투한국커뮤니티",
     "url": "https://discourse.ubuntu-kr.org/u/{}/summary",
-    "user_not_found": "이 페이지가 존재하지 않거나 비공개입니다."
+    "user_not_found": "이 페이지가 존재하지 않거나 비공개입니다.",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "우피(노션 블로그)",
     "url": "https://{}.oopy.io/",
-    "user_not_found": "dns"
+    "user_not_found": "dns",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "웃긴대학",
     "url": "https://web.humoruniv.com/search/search.html?section=humoruniv&search_text={}&board=&search_type=nick&order=uptime",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "유튜브",
     "url": "https://www.youtube.com/@{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "인벤",
     "url": "https://www.inven.co.kr/member/inventory/view_inventory.php?nick={}",
-    "user_not_found": "html"
+    "user_not_found": "html",
+    "description": "alert"
   },
   {
+    "chk_regi": "1",
     "name": "인스타그램",
     "url": "https://www.instagram.com/{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "일간베스트",
     "url": "https://www.ilbe.com/list/jjal?searchType=nick_name&search={}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "카카오 디벨로퍼스",
     "url": "https://devtalk.kakao.com/u/{}/summary",
-    "user_not_found": "status code"
+    "user_not_found": "status code",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "커리어리",
     "url": "https://careerly.co.kr/@{}",
-    "user_not_found": "status code"
+    "user_not_found": "status code",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "코드업",
     "url": "https://codeup.kr/userinfo.php?user={}",
-    "user_not_found": "html"
+    "user_not_found": "html",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "콘솔러",
     "url": "https://konsoler.com/g2//bbs/profile.php?mb_id={}",
-    "user_not_found": "회원정보가 존재하지 않습니다."
+    "user_not_found": "회원정보가 존재하지 않습니다.",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "쿨앤조이",
     "url": "https://coolenjoy.net/bbs/profile.php?mb_id={}",
-    "user_not_found": "html"
+    "user_not_found": "html",
+    "description": "alert"
   },
   {
-    "name": "쿨엔조이",
-    "url": "https://coolenjoy.net/bbs/profile.php?mb_id={}",
-    "user_not_found": "회원정보가 존재하지 않습니다."
-  },
-  {
+    "chk_regi": "1",
     "name": "클리앙",
     "url": "https://www.clien.net/service/search?q={}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "트위터",
     "url": "https://twitter.com/{}",
-    "user_not_found": "계정이 존재하지 않음"
+    "user_not_found": "계정이 존재하지 않음",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "티스토리",
     "url": "{}.tistory.com",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "틱톡",
     "url": "https://www.tiktok.com/@{}?lang=ko-KR",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "팍스넷",
     "url": "https://www.paxnet.co.kr/my/home/{}",
-    "user_not_found": ""
+    "user_not_found": "",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "포스타입",
     "url": "https://{}.postype.com/",
-    "user_not_found": "status code"
+    "user_not_found": "status code",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "풋셀",
     "url": "https://footsell.com/g2//bbs/profile.php?mb_id={}",
-    "user_not_found": "html"
+    "user_not_found": "html",
+    "description": "alert"
   },
   {
+    "chk_regi": "1",
     "name": "힙합언더",
     "url": "https://hiphopunder.com/page/{}",
-    "user_not_found": ""
+    "user_not_found": "redirect",
+    "description": ""
   },
   {
+    "chk_regi": "1",
     "name": "힙합플레이야",
     "url": "https://hiphopplaya.com/g2/bbs/profile.php?mb_id={}",
-    "user_not_found": "html"
+    "user_not_found": "html",
+    "description": "alert"
   }
 ]
