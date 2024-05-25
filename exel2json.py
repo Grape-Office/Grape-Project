@@ -11,9 +11,11 @@ with open(csv_file_path, 'r', encoding='utf-8') as f:
     data = []
     for line in reader:
         d = {
-            'name': line[0],
-            'url': line[1],
-            'user_not_found': line[2]
+            'chk_regi': line[0],
+            'name': line[1],
+            'url': line[2],
+            'user_not_found': line[3],
+            'description': line[4]
         }
         data.append(d)
 
