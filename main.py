@@ -11,7 +11,8 @@ from toCSV import resultsToCSV
 datas = dict()
 cnt = 0
 results = dict()
-
+output = False
+Fast = False
 warnings.filterwarnings(action='ignore')
 
 # 요청을 숨기기 위함
@@ -34,24 +35,37 @@ def read_json():
 
 
 def find_user():
-    global cnt
+    global cnt, output, Fast
     for user in sys.argv[1::]:
-        results[user] = dict()
-        nofity.start(user)
-        for data in datas:
-            site = data['name']
-            url = data['url'].replace('{user}', user)
-            try:
-                response = requests.get(url, headers=headers, verify=False)
-                nofity.search(site, url, response.status_code)
-                if response.status_code == 200:
-                    cnt += 1
-                results[user][data['name']] = url
-            except requests.exceptions.RequestException:
-                continue
-        print('\r'+'='*20+'\r')
-        nofity.result(cnt, user)
-        cnt = 0
+        if user == '-version' or user == '-v':
+            print('Version 1.0')
+            exit(0)
+        elif user == '-help' or user == '-h':
+            print('Usage: python main.py [-verion], [-help], [-output], [-o], [username1], [username2], ...')
+            exit(0)
+        elif user == '-output' or user == '-o':
+            output = True
+        elif user == '-fast' or user == '-f':
+            Fast = True
+        else:
+            results[user] = dict()
+            nofity.start(user)
+            for data in datas:
+                site = data['name']
+                url = data['url'].replace('{}', user)
+                try:
+                    response = requests.get(url, headers=headers, verify=False)
+                    if response.status_code == 200:
+                        if data['user_not_found'] in response.text and data['user_not_found'] != '' and Fast == False:
+                            continue
+                        nofity.search(site, url, response.status_code)
+                        cnt += 1
+                    results[user][data['name']] = url
+                except requests.exceptions.RequestException:
+                    continue
+            print('\r' + '=' * 20 + '\r')
+            nofity.result(cnt, user)
+            cnt = 0
 
 
 def main():
@@ -62,8 +76,9 @@ def main():
     read_json()
 
     find_user()
-    
-    resultsToCSV(results)
+
+    if output:
+        resultsToCSV(results)
 
 
 if __name__ == '__main__':
