@@ -11,6 +11,10 @@ from toCSV import resultsToCSV
 datas = dict()
 cnt = 0
 results = dict()
+
+categories = dict()
+findcategories = dict()
+
 output = False
 Fast = False
 warnings.filterwarnings(action='ignore')
@@ -58,6 +62,11 @@ def find_user():
             for data in datas:
                 site = data['name']
                 url = data['url'].replace('{}', user)
+                if data['category'] not in categories:
+                    categories[data['category']] = 0
+                    findcategories[data['category']] = 0
+                categories[data['category']] += 1
+
                 try:
                     response = requests.get(url, headers=headers, verify=False)
                     if response.status_code == 200:
@@ -66,11 +75,14 @@ def find_user():
                         nofity.search(site, url, response.status_code)
                         cnt += 1
                     results[user][data['name']] = url
+                    findcategories[data['category']] += 1
                 except requests.exceptions.RequestException:
                     continue
             print('\r' + '=' * 20 + '\r')
             nofity.result(cnt, user)
             cnt = 0
+            for i in categories:
+                print(f'{i} : {findcategories[i]} / {categories[i]}')
 
 
 def main():
