@@ -41,7 +41,12 @@ def find_user():
             print('Version 1.0')
             exit(0)
         elif user == '-help' or user == '-h':
-            print('Usage: python main.py [-verion], [-help], [-output], [-o], [username1], [username2], ...')
+            print('Usage: python main.py [-verion], [-v], [-help], [-h], [-output], [-o], [-fast], [-f] [username1], [username2], ...')
+            print('-v, -version : 버전을 확인합니다.')
+            print('-h, -help : 도움말을 확인합니다.')
+            print('-o, -output : 결과를 파일로 출력합니다.')
+            print('-f, -fast : 오탐방지 기능을 끕니다.')
+            print('username1, username2, ... : 검색할 유저명을 입력합니다.')
             exit(0)
         elif user == '-output' or user == '-o':
             output = True
