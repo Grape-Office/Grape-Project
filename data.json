@@ -1,4 +1,26 @@
 [
+  [
+    "블로그",
+    "기술",
+    "커뮤니티",
+    "스트리밍",
+    "스포츠",
+    "음악",
+    "포털",
+    "소셜",
+    "비디오",
+    "비즈니스",
+    "사진",
+    "게임",
+    "마케팅",
+    "소셜 미디어",
+    " 소셜 미디어",
+    "개발",
+    " 커뮤니티",
+    "패션",
+    "정보",
+    "영화"
+  ],
   {
     "name": "Chzzk",
     "url": "https://api.chzzk.naver.com/service/v1/search/channels?keyword={}",
@@ -8,73 +30,133 @@
   {
     "name": "DACON",
     "url": "https://dacon.io/search?tab=user&q={}",
-    "user_not_found": "",
+    "user_not_found": "검색 결과가 없습니다",
     "category": "개발"
   },
   {
     "name": "MLBPARK",
     "url": "https://mlbpark.donga.com/mp/b.php?m=user&user={}",
-    "user_not_found": "",
+    "user_not_found": "요청하신 정보가 존재하지 않습니다.",
     "category": "커뮤니티"
+  },
+  {
+    "name": "WIkidot",
+    "url": "https://www.wikidot.com/user:info/{}",
+    "user_not_found": "User does not exist.",
+    "category": "소셜 미디어"
+  },
+  {
+    "name": "Wikipedia(en)",
+    "url": "https://en.wikipedia.org/wiki/User:{}",
+    "user_not_found": "Not registered in this wiki.",
+    "category": "포털"
+  },
+  {
+    "name": "Wikipedia(ko)",
+    "url": "https://ko.wikipedia.org/wiki/사용자:{}",
+    "user_not_found": "사용자 계정은 이 위키에 등록되어 있지 않습니다.",
+    "category": "포털"
+  },
+  {
+    "name": "Wix",
+    "url": "https://{}.wix.com",
+    "user_not_found": "원하시는 페이지를 찾을 수 없습니다.",
+    "category": "포털"
+  },
+  {
+    "name": "YouPic",
+    "url": "https://youpic.com/{}",
+    "user_not_found": "Oops! You're in the middle of nowhere.",
+    "category": "소셜 미디어"
+  },
+  {
+    "name": "codecademy",
+    "url": "https://www.codecademy.com/profiles/%7B%7D",
+    "user_not_found": "",
+    "category": "개발"
+  },
+  {
+    "name": "facebook",
+    "url": "https://www.facebook.com/{}",
+    "user_not_found": "현재 이 콘텐츠를 이용할 수 없습니다",
+    "category": "소셜 미디어"
   },
   {
     "name": "imgur",
     "url": "https://imgur.com/user/{}",
-    "user_not_found": "",
+    "user_not_found": "We searched high and low, but we couldn’t find the page you're looking for. It may have been moved or deleted, or may never have existed at all.",
     "category": "사진"
   },
   {
     "name": "linktree",
     "url": "https://linktr.ee/{}",
-    "user_not_found": "",
+    "user_not_found": "The page you’re looking for doesn’t exist.",
     "category": "정보"
+  },
+  {
+    "name": "mastodon.cloud",
+    "url": "https://mastodon.cloud/{}",
+    "user_not_found": "The page you are looking for isn't here.",
+    "category": "커뮤니티"
+  },
+  {
+    "name": "mastodon.social",
+    "url": "https://mastodon.social/{}",
+    "user_not_found": "The page you are looking for isn't here.",
+    "category": "커뮤니티"
+  },
+  {
+    "name": "mastodon.xzy",
+    "url": "https://mastodon.xzy/{}",
+    "user_not_found": "The page you are looking for isn't here.",
+    "category": "커뮤니티"
   },
   {
     "name": "op.gg(게시판)",
     "url": "https://talk.op.gg/s/lfg/all?search_target=user_name&search={}",
-    "user_not_found": "",
-    "category": "게임, 커뮤니티"
+    "user_not_found": "검색 결과가 없습니다.",
+    "category": "게임,커뮤니티"
   },
   {
     "name": "slides",
     "url": "https://slides.com/{}",
-    "user_not_found": "",
+    "user_not_found": "We couldn't find what you're looking for\n",
     "category": "기술"
   },
   {
     "name": "snapchat",
     "url": "https://www.snapchat.com/add/{}",
-    "user_not_found": "",
+    "user_not_found": "죄송합니다",
     "category": "소셜"
   },
   {
     "name": "soundcloud",
     "url": "https://soundcloud.com/{}",
-    "user_not_found": "",
+    "user_not_found": "We can’t find that page.\n",
     "category": "음악"
   },
   {
     "name": "spotify",
     "url": "https://open.spotify.com/user/{}",
-    "user_not_found": "",
+    "user_not_found": "페이지를 찾을 수 없음",
     "category": "음악"
   },
   {
     "name": "steam",
     "url": "https://steamcommunity.com/id/{}/",
-    "user_not_found": "",
+    "user_not_found": "Sorry!",
     "category": "게임"
   },
   {
     "name": "velog",
     "url": "velog.io/@{}/posts",
-    "user_not_found": "",
+    "user_not_found": "아무것도 없네요!",
     "category": "블로그"
   },
   {
     "name": "xbox",
     "url": "https://xboxgamertag.com/search/{}",
-    "user_not_found": "",
+    "user_not_found": "Gamertag doesn't exist",
     "category": "게임"
   },
   {
@@ -86,13 +168,13 @@
   {
     "name": "깃허브",
     "url": "https://github.com/{}",
-    "user_not_found": "",
+    "user_not_found": "Find code, projects, and people on GitHub:",
     "category": "개발"
   },
   {
     "name": "나무위키",
     "url": "https://namu.wiki/w/사용자:{}",
-    "user_not_found": "",
+    "user_not_found": "해당 문서를 찾을 수 없습니다.",
     "category": "정보"
   },
   {
@@ -104,7 +186,7 @@
   {
     "name": "네이트판",
     "url": "https://pann.nate.com/search?searchType=N&q={}",
-    "user_not_found": "",
+    "user_not_found": "에 대한 검색결과가 없습니다.",
     "category": "커뮤니티"
   },
   {
@@ -116,7 +198,7 @@
   {
     "name": "닷넷데브",
     "url": "https://forum.dotnetdev.kr/u/{}/summary",
-    "user_not_found": "status code",
+    "user_not_found": "이 페이지가 존재하지 않거나 비공개입니다.",
     "category": "개발"
   },
   {
@@ -128,19 +210,19 @@
   {
     "name": "뒤끝 커뮤니티",
     "url": "https://community.thebackend.io/u/{}/summary",
-    "user_not_found": "status code",
+    "user_not_found": "이런! 그 페이지는 더 이상 존재하지 않거나 비공개 상태입니다.",
     "category": "개발"
   },
   {
     "name": "디벤치 - 개발자 포럼",
     "url": "devbench.kr/users/{}",
-    "user_not_found": "",
+    "user_not_found": "404 Not Found />",
     "category": "개발"
   },
   {
     "name": "디시인사이드",
     "url": "https://gallog.dcinside.com/{}",
-    "user_not_found": "",
+    "user_not_found": "404 Page Not Found",
     "category": "커뮤니티"
   },
   {
@@ -158,37 +240,37 @@
   {
     "name": "리틀리",
     "url": "https://litt.ly/{}",
-    "user_not_found": "redirect",
+    "user_not_found": "올인원 프로필 링크, 리틀리",
     "category": "비즈니스"
   },
   {
     "name": "매니아",
     "url": "https://mania.kr/g2//bbs/profile.php?mb_id={}&bo_table=nbatalk",
-    "user_not_found": "",
+    "user_not_found": "회원정보가 존재하지 않습니다.",
     "category": "커뮤니티"
   },
   {
     "name": "미니맵",
     "url": "https://minimap.net/user/{}",
-    "user_not_found": "앗! 찾을 수 없는 회원 입니다",
+    "user_not_found": "",
     "category": "게임"
   },
   {
     "name": "미디엄",
     "url": "https://medium.com/@{}",
-    "user_not_found": "html",
+    "user_not_found": "PAGE NOT FOUND",
     "category": "블로그"
   },
   {
     "name": "백준온라인저지",
     "url": "https://www.acmicpc.net/user/{}",
-    "user_not_found": "status code",
+    "user_not_found": "Not found",
     "category": "개발"
   },
   {
     "name": "보드라이프",
     "url": "https://boardlife.co.kr/{}",
-    "user_not_found": "status code",
+    "user_not_found": "The requested URL was not found on this server.",
     "category": "게임"
   },
   {
@@ -212,13 +294,13 @@
   {
     "name": "스레드",
     "url": "https://www.threads.net/@{}?hl=ko",
-    "user_not_found": "",
+    "user_not_found": "죄송합니다. 페이지를 이용할 수 없습니다클릭하신 링크가 잘못되었거나 페이지가 삭제되었을 수 있습니다.",
     "category": "소셜 미디어"
   },
   {
     "name": "스팀잇",
     "url": "https://steemit.com/@{}",
-    "user_not_found": "status code",
+    "user_not_found": "Sorry! This page doesn't exist.",
     "category": "소셜 미디어"
   },
   {
@@ -236,13 +318,13 @@
   {
     "name": "아프리카TV",
     "url": "https://bj.afreecatv.com/{}",
-    "user_not_found": "html",
+    "user_not_found": "방송국이 존재하지 않습니다.",
     "category": "스트리밍"
   },
   {
     "name": "알고리즘 위키",
     "url": "https://algowiki.co.kr/userinfo.php?user={}",
-    "user_not_found": "html",
+    "user_not_found": "유저가 존재 하지 않습니다!",
     "category": "개발"
   },
   {
@@ -260,7 +342,7 @@
   {
     "name": "영디비",
     "url": "https://www.0db.co.kr/ylog?smember={}",
-    "user_not_found": "html",
+    "user_not_found": "찾을수 없는 회원입니다.",
     "category": "커뮤니티"
   },
   {
@@ -272,25 +354,25 @@
   {
     "name": "오르비",
     "url": "https://orbi.kr/search?type=nickname&q={}",
-    "user_not_found": "",
+    "user_not_found": "검색 결과가 없습니다.",
     "category": "커뮤니티"
   },
   {
     "name": "요즘IT",
     "url": "https://yozm.wishket.com/magazine/@{}/",
-    "user_not_found": "redirect",
+    "user_not_found": "함께 성장하는 요즘IT인의 실무 라이브러리",
     "category": "블로그"
   },
   {
     "name": "우분투한국커뮤니티",
     "url": "https://discourse.ubuntu-kr.org/u/{}/summary",
-    "user_not_found": "이 페이지가 존재하지 않거나 비공개입니다.",
+    "user_not_found": "",
     "category": "커뮤니티"
   },
   {
     "name": "우피(노션 블로그)",
     "url": "https://{}.oopy.io/",
-    "user_not_found": "dns",
+    "user_not_found": "",
     "category": "블로그"
   },
   {
@@ -302,13 +384,13 @@
   {
     "name": "유튜브",
     "url": "https://www.youtube.com/@{}",
-    "user_not_found": "",
+    "user_not_found": "죄송합니다. 이 페이지를 사용할 수 없습니다.",
     "category": "소셜 미디어"
   },
   {
     "name": "인벤",
     "url": "https://www.inven.co.kr/member/inventory/view_inventory.php?nick={}",
-    "user_not_found": "html",
+    "user_not_found": "잘못된 접근입니다.",
     "category": "커뮤니티"
   },
   {
@@ -326,19 +408,19 @@
   {
     "name": "카카오 디벨로퍼스",
     "url": "https://devtalk.kakao.com/u/{}/summary",
-    "user_not_found": "status code",
+    "user_not_found": "이 페이지가 존재하지 않거나 비공개입니다.",
     "category": "개발"
   },
   {
     "name": "커리어리",
     "url": "https://careerly.co.kr/@{}",
-    "user_not_found": "status code",
+    "user_not_found": "요청하신 페이지를 찾을 수 없습니다.",
     "category": "개발, 커뮤니티"
   },
   {
     "name": "코드업",
     "url": "https://codeup.kr/userinfo.php?user={}",
-    "user_not_found": "html",
+    "user_not_found": "그런 사용자는 없습니다!",
     "category": "개발"
   },
   {
@@ -350,14 +432,14 @@
   {
     "name": "쿨앤조이",
     "url": "https://coolenjoy.net/bbs/profile.php?mb_id={}",
-    "user_not_found": "html",
+    "user_not_found": "회원정보가 존재하지 않습니다.",
     "category": "커뮤니티"
   },
   {
-    "name": "클리앙",
-    "url": "https://www.clien.net/service/search?q={}",
+    "name": "텀블러",
+    "url": "https://www.tumblr.com/{}",
     "user_not_found": "",
-    "category": "커뮤니티"
+    "category": "소셜 미디어"
   },
   {
     "name": "트위터",
@@ -374,37 +456,43 @@
   {
     "name": "틱톡",
     "url": "https://www.tiktok.com/@{}?lang=ko-KR",
-    "user_not_found": "",
+    "user_not_found": "이 계정을 찾을 수 없음",
     "category": "비디오, 소셜 미디어"
+  },
+  {
+    "name": "틴더",
+    "url": "https://tinder.com/@{}",
+    "user_not_found": "",
+    "category": "소셜 미디어"
   },
   {
     "name": "팍스넷",
     "url": "https://www.paxnet.co.kr/my/home/{}",
-    "user_not_found": "",
+    "user_not_found": "서비스 이용에 불편을 드려 죄송합니다.",
     "category": "커뮤니티"
   },
   {
     "name": "포스타입",
     "url": "https://{}.postype.com/",
-    "user_not_found": "status code",
+    "user_not_found": "앗, 존재하지 않는 길이에요.",
     "category": "소셜 미디어"
   },
   {
     "name": "풋셀",
     "url": "https://footsell.com/g2//bbs/profile.php?mb_id={}",
-    "user_not_found": "html",
-    "category": "패션, 커뮤니티"
+    "user_not_found": "회원정보가 존재하지 않습니다.",
+    "category": "패션,커뮤니티"
   },
   {
     "name": "힙합언더",
     "url": "https://hiphopunder.com/page/{}",
-    "user_not_found": "redirect",
+    "user_not_found": "요청하신 웹페이지를 찾을 수 없습니다.",
     "category": "커뮤니티"
   },
   {
     "name": "힙합플레이야",
     "url": "https://hiphopplaya.com/g2/bbs/profile.php?mb_id={}",
-    "user_not_found": "html",
+    "user_not_found": "회원정보가 존재하지 않습니다.",
     "category": "커뮤니티"
   }
 ]

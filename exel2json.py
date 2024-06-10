@@ -1,13 +1,14 @@
 import csv
 import json
 
-csv_file_path = '한국 커뮤니티 조사 - 시트1 (3).csv' # our csv file
+csv_file_path = '한국 커뮤니티 조사 - 시트1 (1).csv' # our csv file
+
+arr = []
 
 # csv 파일 읽어오기
 with open(csv_file_path, 'r', encoding='utf-8') as f:
     reader = csv.reader(f)
     next(reader)
-
     data = []
     for line in reader:
         d = {
@@ -17,8 +18,16 @@ with open(csv_file_path, 'r', encoding='utf-8') as f:
             'category': line[2]
         }
         data.append(d)
+        semiarr = line[2].split(',')
+        for i in semiarr:
+            arr.append(i)
 
 data.sort(key=lambda x: x['name'])
+
+arr.sort()
+arr = list(set(arr))
+
+data.insert(0, arr)
 
 json_string = json.dumps(data, ensure_ascii=False, indent=2)
 
