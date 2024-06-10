@@ -2,7 +2,7 @@ from colorama import Fore, Style
 
 
 def user_not_found():
-    title = "사용법: python main.py [유저명1] [유저명2] ..."
+    title = "사용법: python main.py [옵션] [유저명1] [유저명2] ..."
 
     print(Style.BRIGHT + Fore.RED + f"{title}")
     print('\r')
