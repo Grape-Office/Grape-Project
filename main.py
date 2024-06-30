@@ -88,7 +88,9 @@ def find_user():
 def draw_histogram():
     labels = [nofity.pad_string(label, 15) for label in categories.keys()]
     values = [findcategories[label] for label in categories.keys()]
-    nofity.plot_histogram(labels, values)
+    sorted_pairs = sorted(zip(labels, values), key=lambda x: x[0])
+    sorted_labels, sorted_values = zip(*sorted_pairs)
+    nofity.plot_histogram(sorted_labels, sorted_values)
     
 
 def main():
