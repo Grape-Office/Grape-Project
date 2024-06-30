@@ -57,16 +57,17 @@ def find_user():
         elif user == '-fast' or user == '-f':
             Fast = True
         else:
-            for i in datas[0]:
-                categories[i] = 0
-                findcategories[i] = 0
+            for data in datas[0]:
+                data = data.strip()
+                categories[data] = 0
+                findcategories[data] = 0
             results[user] = dict()
             nofity.start(user)
             for data in datas[1::]:
                 site = data['name']
                 url = data['url'].replace('{}', user)
-                for i in str(data['category']).split(','):
-                    categories[i] += 1
+                for word in str(data['category']).split(','):
+                    categories[word.strip()] += 1
                 try:
                     response = requests.get(url, headers=headers, verify=False)
                     if response.status_code == 200:
@@ -75,16 +76,20 @@ def find_user():
                         nofity.search(site, url, response.status_code)
                         cnt += 1
                     results[user][data['name']] = url
-                    for i in str(data['category']).split(','):
-                        findcategories[i] += 1
+                    for word in str(data['category']).split(','):
+                        findcategories[word.strip()] += 1
                 except requests.exceptions.RequestException:
                     continue
             print('\r' + '=' * 20 + '\r')
             nofity.result(cnt, user)
             cnt = 0
-            for i in categories:
-                print(f'{i} : {findcategories[i]} / {categories[i]}')
 
+
+def draw_histogram():
+    labels = [nofity.pad_string(label, 15) for label in categories.keys()]
+    values = [findcategories[label] for label in categories.keys()]
+    nofity.plot_histogram(labels, values)
+    
 
 def main():
     banner("PodoChung")
@@ -97,7 +102,8 @@ def main():
 
     if output:
         resultsToCSV(results)
-
+        
+    draw_histogram()
 
 if __name__ == '__main__':
     main()
