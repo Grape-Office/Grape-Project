@@ -1,4 +1,18 @@
 from colorama import Fore, Style
+from wcwidth import wcswidth
+
+CATEGORIE_WIDTH = 20
+BRIGHT_GREEN_PLUS = f"{Style.BRIGHT}{Fore.WHITE}[{Fore.GREEN}+] "
+
+
+def pad_string(s, width):
+    pad_length = width - wcswidth(s)
+    return s + ' ' * pad_length
+
+
+def plot_histogram(labels, values):
+    for label, value in zip(labels, values):
+        print(f"{Style.BRIGHT}{label}: {Fore.GREEN}{'▇▇' * int(value)} {Fore.BLUE}{value}")
 
 
 def user_not_found():
@@ -23,9 +37,8 @@ def start(message):
 
 def search(site, url, status):
     if status == 200:
-        print(Style.BRIGHT + Fore.WHITE + "[" + Fore.GREEN + "+" +
-              Fore.GREEN + f"] {site} \t" +
-              Fore.WHITE + f": {url}")
+        padded_site = pad_string(site, CATEGORIE_WIDTH)
+        print(f"{BRIGHT_GREEN_PLUS}{Fore.GREEN}{padded_site}{Fore.WHITE}: {url}")
     return
 
 
