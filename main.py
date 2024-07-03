@@ -52,7 +52,8 @@ def find_user():
             print('Version 1.0')
             exit(0)
         elif user == '-help' or user == '-h':
-            print('Usage: python main.py [-verion], [-v], [-help], [-h], [-output], [-o], [-fast], [-f], [-domain domain_path], [-d domain_path] [username1], [username2], ...')
+            print(
+                'Usage: python main.py [-verion], [-v], [-help], [-h], [-output], [-o], [-fast], [-f], [-domain domain_path], [-d domain_path] [username1], [username2], ...')
             print('-v, -version : 버전을 확인합니다.')
             print('-h, -help : 도움말을 확인합니다.')
             print('-o, -output : 결과를 파일로 출력합니다.')
@@ -105,7 +106,7 @@ def draw_histogram():
     sorted_pairs = sorted(zip(labels, values), key=lambda x: x[0])
     sorted_labels, sorted_values = zip(*sorted_pairs)
     nofity.plot_histogram(sorted_labels, sorted_values)
-    
+
 
 def main():
     banner("PodoChung")
@@ -118,8 +119,9 @@ def main():
 
     if output:
         resultsToCSV(results)
-        
+
     draw_histogram()
+
 
 if __name__ == '__main__':
     main()

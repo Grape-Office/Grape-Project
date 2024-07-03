@@ -1,7 +1,7 @@
 import csv
 import json
 
-csv_file_path = '한국 커뮤니티 조사 - 시트1 (1).csv' # our csv file
+csv_file_path = '한국 커뮤니티 조사 - 시트1 (1).csv'  # our csv file
 
 arr = []
 
