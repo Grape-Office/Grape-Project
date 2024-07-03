@@ -45,3 +45,19 @@ def search(site, url, status):
 def result(cnt, user):
     print(Style.BRIGHT + Fore.WHITE + f"총 {cnt}개의 사이트에서 {user}를 찾았습니다.")
     return
+
+
+def domain(domain, user, result, re_dic):
+    if result:
+        print(Style.BRIGHT + Fore.WHITE + f"사이트 \"{domain}\"과 \"{user}\"는 연관되어 보입니다.")
+        for key, value in re_dic.items():
+            if 'Registrant' == key:
+                print(f"\t{key}: {value}")
+            if 'Administrative' == key:
+                print(f"\t{key}: {value}")
+            if 'AC E-Mail' == key:
+                print(f"\t{key}: {value}")
+        print()
+    else:
+        print(Style.BRIGHT + Fore.WHITE + f"사이트 \"{domain}\"과 \"{user}\"는 연관이 없어 보입니다.\n")
+    return

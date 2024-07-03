@@ -1,10 +1,13 @@
 import json
 import sys
+import threading
 import warnings
 
-import nofity
 import requests
+
+import nofity
 from banner import banner
+from domain_checker import e_checker
 from toCSV import resultsToCSV
 
 # Global variable
@@ -17,6 +20,8 @@ findcategories = dict()
 
 output = False
 Fast = False
+Domain = False
+target_domain = str()
 warnings.filterwarnings(action='ignore')
 
 # 요청을 숨기기 위함
@@ -39,23 +44,29 @@ def read_json():
 
 
 def find_user():
-    global cnt, output, Fast
-    for user in sys.argv[1::]:
+    global cnt, output, Fast, Domain
+    global target_domain
+    args = iter(sys.argv[1::])
+    for user in args:
         if user == '-version' or user == '-v':
             print('Version 1.0')
             exit(0)
         elif user == '-help' or user == '-h':
-            print('Usage: python main.py [-verion], [-v], [-help], [-h], [-output], [-o], [-fast], [-f] [username1], [username2], ...')
+            print('Usage: python main.py [-verion], [-v], [-help], [-h], [-output], [-o], [-fast], [-f], [-domain domain_path], [-d domain_path] [username1], [username2], ...')
             print('-v, -version : 버전을 확인합니다.')
             print('-h, -help : 도움말을 확인합니다.')
             print('-o, -output : 결과를 파일로 출력합니다.')
             print('-f, -fast : 오탐방지 기능을 끕니다.')
             print('username1, username2, ... : 검색할 유저명을 입력합니다.')
+            print('-d, -domain : 입력된 도메인의 정보와 검색할 유저명을 비교합니다.')
             exit(0)
         elif user == '-output' or user == '-o':
             output = True
         elif user == '-fast' or user == '-f':
             Fast = True
+        elif user == '-domain' or user == '-d':
+            Domain = True
+            target_domain = next(args)
         else:
             for data in datas[0]:
                 data = data.strip()
@@ -63,6 +74,9 @@ def find_user():
                 findcategories[data] = 0
             results[user] = dict()
             nofity.start(user)
+            if Domain:
+                d_result, d_re_dict = e_checker(user, target_domain, thr=0.3)
+                nofity.domain(target_domain, user, d_result, d_re_dict)
             for data in datas[1::]:
                 site = data['name']
                 url = data['url'].replace('{}', user)

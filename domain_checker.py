@@ -114,9 +114,9 @@ def e_checker(user, url, thr=0.3):
     parsed_result = parse_whois_response(response)
     # for key, value in parsed_result.items():
     #     print(f"{key}: {value}")
-    return is_related_to_user(parsed_result, user, thr=thr)
+    return (is_related_to_user(parsed_result, user, thr=thr), parsed_result)
 
 
 if __name__ == '__main__':
-    result = e_checker("magicclub", "magicclub.co.kr", thr=0.3)
+    result, re_dict = e_checker("magicclub", "magicclub.co.kr", thr=0.3)
     print(result)
