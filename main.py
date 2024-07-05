@@ -109,7 +109,7 @@ def draw_histogram():
 
 
 def main():
-    banner("PodoChung")
+    banner("PodoCheong")
 
     check_user()
 

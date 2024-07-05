@@ -9,7 +9,7 @@
 1. git clone
     ```bash
     git clone https://github.com/Grape-Office/Grape-Project.git
-    cd PODOCHEONG
+    cd Podocheong
     ```
 2. command
     ```bash
@@ -35,8 +35,10 @@
 
     오탐방지 기능을 끄고, "domain.com"의 도메인 정보와 유저명 "johndoe"를 비교하려면 다음과 같이 실행합니다.
     ```bash
-    python main.py -o -f -d domain.com johndoe
+    python main.py -f -d domain.com johndoe
     ```
+
+    ![mov](./mov_sample.gif)
 
 # Docker
 1. Docker Image build
