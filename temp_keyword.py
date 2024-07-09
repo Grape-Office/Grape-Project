@@ -15,4 +15,3 @@ freq_dist = nltk.FreqDist(filtered_words)
 keywords = [word for word, freq in freq_dist.items() if freq > 1]
 
 print(keywords)
-

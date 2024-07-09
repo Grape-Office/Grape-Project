@@ -18,16 +18,17 @@ def is_shortened_url(url):
         "cutt.ly", "rebrandly.com", "bl.ink", "t2mio.com",
         "vzturl.com", "shorturl.at", "short.cm"
     ]
-    
+
     domain_pattern = re.compile(r"https?://([^/]+)")
     match = domain_pattern.match(url)
-    
+
     if match:
         domain = match.group(1)
         if domain in shortened_domains:
             return True
-    
+
     return False
+
 
 def get_original_url(short_url):
     if is_shortened_url(short_url):
@@ -40,13 +41,14 @@ def get_original_url(short_url):
     else:
         return short_url
 
+
 def levenshtein_distance(s1, s2):
     if len(s1) < len(s2):
         return levenshtein_distance(s2, s1)
-    
+
     if len(s2) == 0:
         return len(s1)
-    
+
     previous_row = range(len(s2) + 1)
     for i, c1 in enumerate(s1):
         current_row = [i + 1]
@@ -56,10 +58,11 @@ def levenshtein_distance(s1, s2):
             substitutions = previous_row[j] + (c1 != c2)
             current_row.append(min(insertions, deletions, substitutions))
         previous_row = current_row
-    
+
     return previous_row[-1]
 
-def is_related_to_user(domain_info, user, thr = 0.3):
+
+def is_related_to_user(domain_info, user, thr=0.3):
     def is_similar(value, user):
         threshold = thr  # 유사도로 판단할 임계값 설정 (0.0 ~ 1.0)
         if not value:
@@ -69,22 +72,27 @@ def is_related_to_user(domain_info, user, thr = 0.3):
         return similarity >= threshold
 
     if isinstance(domain_info, dict):
-        if 'Registrant' in domain_info and is_similar(domain_info['Registrant'], user):
+        if 'Registrant' in domain_info and is_similar(
+                domain_info['Registrant'], user):
             return True
-        if 'Administrative' in domain_info and is_similar(domain_info['Administrative'], user):
+        if 'Administrative' in domain_info and is_similar(
+                domain_info['Administrative'], user):
             return True
         if 'AC E-Mail' in domain_info and domain_info['AC E-Mail'] is not None:
-            if any(is_similar(email, user) for email in domain_info['AC E-Mail']):
+            if any(is_similar(email, user)
+                   for email in domain_info['AC E-Mail']):
                 return True
     return False
 
-## KISA WHOIS
-## => OpenAPI로 수정 필요: https://xn--c79as89aj0e29b77z.xn--3e0b707e/kor/openkey/keyCre.do
+# KISA WHOIS
+# => OpenAPI로 수정 필요: https://xn--c79as89aj0e29b77z.xn--3e0b707e/kor/openkey/keyCre.do
+
+
 def query_krnic_whois(domain):
     server = "whois.kr"
     port = 43
     query = f"{domain}\r\n"
-    
+
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.connect((server, port))
         s.send(query.encode())
@@ -94,7 +102,7 @@ def query_krnic_whois(domain):
             if not data:
                 break
             response += data
-    
+
     return response.decode()
 
 
@@ -114,9 +122,9 @@ def e_checker(user, url, thr=0.3):
     parsed_result = parse_whois_response(response)
     # for key, value in parsed_result.items():
     #     print(f"{key}: {value}")
-    return is_related_to_user(parsed_result, user, thr=thr)
+    return (is_related_to_user(parsed_result, user, thr=thr), parsed_result)
 
 
 if __name__ == '__main__':
-    result = e_checker("magicclub", "magicclub.co.kr", thr=0.3)
+    result, re_dict = e_checker("magicclub", "magicclub.co.kr", thr=0.3)
     print(result)

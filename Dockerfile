@@ -1,12 +1,19 @@
-FROM ubuntu:20.04
-
-RUN apt-get update && apt-get install -y python3 python3-pip
+FROM python:3.9-slim-buster
 
 WORKDIR /app
 
 COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip3 install --no-cache-dir -r requirements.txt
+COPY main.py .
+COPY data.json .
+COPY nofity.py .
+COPY banner.py .
+COPY domain_checker.py .
+COPY toCSV.py .
+COPY exel2json.py .
+COPY temp_keyword.py .
+COPY toCSV.py .
 
-COPY . .
-
+ENTRYPOINT ["python", "main.py"]
+CMD []
