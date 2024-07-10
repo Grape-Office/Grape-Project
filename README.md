@@ -9,7 +9,7 @@
 1. git clone
     ```bash
     git clone https://github.com/Grape-Office/Grape-Project.git
-    cd Podocheong
+    cd Grape-Project
     ```
 2. command
     ```bash
