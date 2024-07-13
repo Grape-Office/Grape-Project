@@ -44,8 +44,8 @@ def read_json():
 
 
 def find_user():
-    global cnt, output, Fast, Domain
-    global target_domain
+    global cnt, output, Fast, Domain, target_domain, proxy
+    proxy = None
     args = iter(sys.argv[1::])
     for user in args:
         if user == '-version' or user == '-v':
@@ -59,8 +59,8 @@ def find_user():
             print('-o, -output : 결과를 파일로 출력합니다.')
             print('-f, -fast : 오탐방지 기능을 끕니다.')
             print('-d, -domain : 입력된 도메인의 정보와 검색할 유저명을 비교합니다.')
+            print('-p, -proxy : HTTP 요청을 프록시를 사용해 보냅니다.')
             print('username1, username2, ... : 검색할 유저명을 입력합니다.')
-            print('-d, -domain : 입력된 도메인의 정보와 검색할 유저명을 비교합니다.')
             exit(0)
         elif user == '-output' or user == '-o':
             output = True
@@ -69,6 +69,10 @@ def find_user():
         elif user == '-domain' or user == '-d':
             Domain = True
             target_domain = next(args)
+        elif user == '-proxy' or user == '-p':
+            proxy = next(args)
+            if not proxy.startswith('http'):
+                proxy = "http://" + proxy
         else:
             for data in datas[0]:
                 data = data.strip()
@@ -85,7 +89,7 @@ def find_user():
                 for word in str(data['category']).split(','):
                     categories[word.strip()] += 1
                 try:
-                    response = requests.get(url, headers=headers, verify=False)
+                    response = requests.get(url, headers=headers, verify=False, proxies={'http': proxy if proxy else None, 'https': proxy if proxy else None})
                     if response.status_code == 200:
                         if data['user_not_found'] in response.text and data['user_not_found'] != '' and Fast == False:
                             continue
