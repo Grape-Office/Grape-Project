@@ -21,6 +21,7 @@
     |-o, --output|결과를 파일로 출력|
     |-f, --fast|오탐방지 기능 끄기|
     |-d, --domain|입력된 도메인의 정보와 검색할 유저명 비교|
+    |-p, --proxy|프록시를 사용해 HTTP 요청 보내기|
 
 - example
     ```bash
@@ -30,6 +31,7 @@
     python3 main.py -o johndoe
     python3 main.py -f johndoe
     python3 main.py -d domain.com johndoe
+    python3 main.py -p 127.0.0.1 johndoe
     ```
 
     오탐방지 기능을 끄고, "domain.com"의 도메인 정보와 유저명 "johndoe"를 비교하려면 다음과 같이 실행합니다.
