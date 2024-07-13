@@ -3,7 +3,7 @@
 
 이 프로젝트는 한국 커뮤니티에 특화된 OSINT(Open-Source INTelligence, 공개 출처 정보 수집) 툴입니다.
 
-![image](./img_sample.png)
+ ![mov](./mov_sample.gif)
 
 # Usage
 1. git clone
