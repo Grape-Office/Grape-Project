@@ -49,15 +49,16 @@
     ```
 2. Docker Container execution
     ```bash
-    docker run --rm podochung [옵션] [유저명 1] [유저명 2] ...
+    docker run -d -t --privileged --name podo podochung
+    docker exec -it -u root podo bash
     ```
     
     옵션과 유저명 사용법은 로컬 실행과 동일합니다.
 
 - example
     ```bash
-    docker run --rm podochung tempuser
-    docker run --rm podochung -f -o -d naver.com tempuser
+    python main.py tempuser
+    python main.py -f -o -d naver.com tempuser
     ```
 
 # Data Collecting
