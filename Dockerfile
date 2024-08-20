@@ -15,5 +15,5 @@ COPY exel2json.py .
 COPY temp_keyword.py .
 COPY toCSV.py .
 
-ENTRYPOINT ["python", "main.py"]
-CMD []
+ENTRYPOINT []
+CMD ["/bin/bash"]
